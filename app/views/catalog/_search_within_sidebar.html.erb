@@ -1,0 +1,13 @@
+<%= render :partial => 'search_within_form' %>
+
+<% if session[:fine] -%>
+<ul>
+  <li><%= link_back_to_catalog %></li>
+</ul>
+<% end -%>
+
+<p>
+<%= JSON.parse(session[:fine]) if session[:fine] %>
+</p>
+
+<%= render :partial => 'show_sidebar' %>

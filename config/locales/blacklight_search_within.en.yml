@@ -1,0 +1,10 @@
+en:
+  blacklight:
+    search_within:
+      form:
+        search_field:
+          label: 'Search in'
+          title: 'Targeted search options'
+          post_label: 'for'
+        q: 'Search within...'
+        submit: 'Search within'

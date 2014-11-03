@@ -15,10 +15,17 @@ module BlacklightSearchWithin
     end
   
     def add_search_within_params(solr_params, req_params)
-      coarse_field = blacklight_config.index.coarse_field
-      if coarse_field
+      if req_params[:fine]
+        fine_field = blacklight_config.show.fine_field
         solr_params[:fq] ||= []
-        solr_params[:fq] << "#{blacklight_config.index.coarse_field}:true"
+        solr_params[:fq] << "#{fine_field}:#{req_params[:fine]}"
+        req_params.delete(:fine)
+      else
+        coarse_field = blacklight_config.index.coarse_field
+        if coarse_field
+          solr_params[:fq] ||= []
+          solr_params[:fq] << "#{coarse_field}:true"
+        end
       end
     end
   end

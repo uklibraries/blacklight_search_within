@@ -1,36 +1,36 @@
 - :id: "sample_book_cats"
-  :coarse_field_s: true
+  :coarse_field_b: true
   :fine_field_s: "sample_book_cats"
   :title_t: "Cats coarse_test"
   :author_t: "Mr. Whiskers"
 
 - :id: "sample_book_cats_1"
-  :coarse_field_s: false
+  :coarse_field_b: false
   :fine_field_s: "sample_book_cats"
   :title_t: "Cats coarse_test (page 1)"
 
 - :id: "sample_book_cats_2"
-  :coarse_field_s: false
+  :coarse_field_b: false
   :fine_field_s: "sample_book_cats"
   :title_t: "Cats coarse_test (page 2)"
 
 - :id: "sample_book_cats_3"
-  :coarse_field_s: false
+  :coarse_field_b: false
   :fine_field_s: "sample_book_cats"
   :title_t: "Cats coarse_test (page 3)"
 
 - :id: "sample_book_dogs"
-  :coarse_field_s: true
+  :coarse_field_b: true
   :fine_field_s: "sample_book_dogs"
   :title_t: "Dogs coarse_test"
   :author_t: "Dr. Dachshund"
 
 - :id: "sample_book_dogs_1"
-  :coarse_field_s: false
+  :coarse_field_b: false
   :fine_field_s: "sample_book_dogs"
   :title_t: "Dogs coarse_test (page 1)"
 
 - :id: "sample_book_dogs_2"
-  :coarse_field_s: false
+  :coarse_field_b: false
   :fine_field_s: "sample_book_dogs"
   :title_t: "Dogs coarse_test (page 2)"
