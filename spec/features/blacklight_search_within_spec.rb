@@ -1,12 +1,12 @@
 require "spec_helper"
 
-describe "Blacklight Search Within" do
+describe "Blacklight Search Within", :type => :feature do
   before do
     load_sample_documents
     CatalogController.blacklight_config = Blacklight::Configuration.new
   end
 
-  it "should collapse results if coarse_field is specified" do
+  it "collapses results if coarse_field is specified" do
     CatalogController.configure_blacklight do |config|
       config.index.coarse_field = :coarse_field_s
     end
@@ -14,7 +14,7 @@ describe "Blacklight Search Within" do
     expect(number_of_results_from_page(page)).to eq 2
   end
 
-  it "should not collapse results if coarse_field is not specified" do
+  it "does not collapse results if coarse_field is not specified" do
     search_for "coarse_test"
     expect(number_of_results_from_page(page)).to eq 7
   end
