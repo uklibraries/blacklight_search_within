@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.authors = ["Michael Slone"]
   s.email = ["m.slone@gmail.com"]
-  s.homepage    = "https://github.com/projectblacklight/blacklight_search_within"
+  s.homepage    = "https://github.com/cokernel/blacklight_search_within"
   s.summary = "Blacklight Search Within Plugin"
 
   s.files         = `git ls-files`.split("\n")
