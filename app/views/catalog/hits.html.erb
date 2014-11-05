@@ -1,0 +1,13 @@
+<div id="content" class="col-md-9 col-sm-8">
+  <% unless has_search_parameters? %>
+    <%# this shouldn't be "home" %>
+    <%= render "home" %>
+  <% else %>
+    <%= render "search_results" %>
+  <% end %>
+</div>
+
+<div id="sidebar" class="col-md-3 col-sm-4">
+  <%#= render "search_within_sidebar" %>
+  <%= render_document_sidebar_partial %>
+</div>

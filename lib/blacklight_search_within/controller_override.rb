@@ -13,7 +13,24 @@ module BlacklightSearchWithin
         helper SearchWithinHelper
       end
     end
-  
+
+    def hits
+      (response, @document) = get_solr_response_for_doc_id
+      (@response, @document_list) = get_search_results
+
+      respond_to do |format|
+        format.html {setup_next_and_previous_documents}
+        format.rss  {render :layout => false}
+        format.atom {render :layout => false}
+        format.json do
+          render json: render_search_results_as_json
+        end
+
+        additional_response_formats(format)
+        document_export_formats(format)
+      end
+    end
+
     def add_search_within_params(solr_params, req_params)
       if req_params[:fine]
         fine_field = blacklight_config.show.fine_field

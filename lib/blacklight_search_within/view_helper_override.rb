@@ -11,4 +11,12 @@
     def render_document_sidebar_partial(document = @document)
       render :partial => "search_within_sidebar"
     end
+
+#    def search_action_url options = {}
+#      if action_name == "show"
+#        url_for(options.merge(:action => "hits"))
+#      else
+#        url_for(options.merge(:action => "index"))
+#      end
+#    end
   end
