@@ -3,7 +3,7 @@
   # display. 
   module BlacklightSearchWithin::ViewHelperOverride
     def render_search_bar
-      unless ["show", "hits"].include? action_name
+      if ["index"].include? action_name
         render :partial => "catalog/search_form"
       end
     end
