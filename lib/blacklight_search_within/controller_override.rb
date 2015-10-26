@@ -36,6 +36,10 @@ module BlacklightSearchWithin
         fine_field = blacklight_config.show.fine_field
         solr_params[:fq] ||= []
         solr_params[:fq] << "#{fine_field}:#{req_params[:fine]}"
+        coarse_field = blacklight_config.index.coarse_field
+        if coarse_field
+          solr_params[:fq] << "#{coarse_field}:false"
+        end
         req_params.delete(:fine)
       else
         coarse_field = blacklight_config.index.coarse_field
