@@ -38,7 +38,7 @@ module BlacklightSearchWithin
         solr_params[:fq] << "#{fine_field}:#{req_params[:fine]}"
         coarse_field = blacklight_config.index.coarse_field
         if coarse_field
-          solr_params[:fq] << "#{coarse_field}:false"
+          solr_params[:fq] << "(NOT id:#{req_params[:fine]})"
         end
         req_params.delete(:fine)
       else
