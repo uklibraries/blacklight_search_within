@@ -29,7 +29,7 @@ purposes of the search within feature.
 Add to your application's Gemfile:
 
 ```
-gem "blacklight_search_within", :git => "https://github.com/uklibraries/blacklight_search_within.git"
+gem "blacklight_search_within", :git => "https://github.com/cokernel/blacklight_search_within.git"
 ```
 
 then run `bundle install`.
